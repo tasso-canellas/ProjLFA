@@ -100,7 +100,7 @@ class AnalisadorLexico:
                     if i < n and string[i] == '=':
                         state = 7
                     else:
-                        i = i-1
+                        i -= 1
                         state = 7
 
                 case 4:

@@ -14,9 +14,15 @@ def conta_comment(string):
             state = 3
             i+=2
         else: i+=1
+    if state == 2:
+        print("Erro! Comentário não foi fechado!")
+        return -1
+        
     return count
 
 if __name__ == "__main__":
-    codigo = """
+    codigo = """/*abc*/ /*
     """
-    print(conta_comment(codigo))
+    count = conta_comment(codigo)
+    if count != -1:
+        print(count)
